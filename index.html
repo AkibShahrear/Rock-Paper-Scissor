@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="GameContainer">
+    <div class="GameHeading">
+        <h1>Rock-Paper-Scissors Game</h1>
+    </div>
+    <div class="GameBody">
+        <div class="GameBodyHeading">
+            <h2>Choose Your Move</h2>
+        </div>
+        <div class="GameBodyOptions">
+            <div class="ButtonStyle">
+                <img src="./Resource/rocks.png" alt="Rock">
+                <button onclick="userClick(this, 'rock')" id="rock">Rock</button>
+            </div>
+            <div class="ButtonStyle">
+                <img src="./Resource/documents.png" alt="Paper">
+                <button onclick="userClick(this, 'paper')" id="paper">Paper</button>
+            </div>
+            <div class="ButtonStyle">
+                <img src="./Resource/scissor.png" alt="Scissors">
+                <button id="scissors" onclick="userClick(this, 'scissor')">Scissors</button>
+            </div>
+        </div>
+    <div class = "MovesSection">
+        <!-- User Move Section -->
+        <div>
+            <h2>User Move</h2>
+            <div class="GameBodyUser ButtonStyle" id="UserSection">
+                <img src="./Resource/loading.gif" alt="User move loading" id="UserMove">
+            </div>
+        </div>
+        <!-- End User Move Section -->
+        
+        <!-- Computer Move Section -->
+        <div>
+            <h2>Computers Move</h2>
+            <div class="GameBodyComputer ButtonStyle" id="ComputerSection">
+                <img src="./Resource/loading.gif" alt="Computer's move loading" id="ComputerMove">
+            </div>
+        </div>
+        <!-- End Computer Move Section -->
+    </div>
+        <div class="GameBodyResult">
+            <h2>Result</h2>
+            <p>Player Score: <span id="UserScore">0</span></p>
+            <p>Computer Score: <span id="ComputerScore">0</span></p>
+            <div class="ResultDiv">
+            <p><span id="result">Draw</span></p>
+            </div>
+        </div>
+        <div class="GameBodyButton">
+            <button onclick="resetGame()">Reset Game</button>
+        </div>  
+    </div>
+</body>
+</html>
